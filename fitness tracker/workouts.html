@@ -1,0 +1,61 @@
+<!-- workouts.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker | Workouts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background"></div>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <h1>Fitness Tracker</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="workouts.html">Workouts</a></li>
+                    <li><a href="progress.html">Progress</a></li>
+                    <li><a href="login.html">Log In</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <section class="workouts">
+                <h2>Available Workouts</h2>
+                <div class="cards">
+                    <div class="card">
+                        <h3>Cardio</h3>
+                        <p>Boost your endurance with high-intensity cardio workouts.</p>
+                        <button onclick="logWorkout('Cardio')">Start Cardio</button>
+                    </div>
+                    <div class="card">
+                        <h3>Strength Training</h3>
+                        <p>Build strength with weight lifting and bodyweight exercises.</p>
+                        <button onclick="logWorkout('Strength')">Start Strength Training</button>
+                    </div>
+                    <div class="card">
+                        <h3>Yoga</h3>
+                        <p>Improve flexibility and relaxation with yoga poses.</p>
+                        <button onclick="logWorkout('Yoga')">Start Yoga</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2025 Fitness Tracker | All rights reserved</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

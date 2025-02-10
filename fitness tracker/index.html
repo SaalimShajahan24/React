@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Motion Background -->
+    <div class="background"></div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <header>
+            <h1>Welcome to Fitness Tracker</h1>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Workouts</a>
+                <a href="#">Progress</a>
+                <a href="#">Log In</a>
+            </nav>
+        </header>
+
+        <!-- User Section -->
+        <section class="user-dashboard">
+            <h2>User Dashboard</h2>
+            <p>Track your workouts, goals, and progress here!</p>
+            
+            <!-- Goal Setting Section -->
+            <div class="goal-setting">
+                <h3>Set Your Fitness Goal</h3>
+                <input type="text" id="goal-input" placeholder="Enter your fitness goal">
+                <button id="goal-button">Set Goal</button>
+            </div>
+            <p id="goal-message"></p> <!-- This will show the goal confirmation message -->
+
+            <div class="fitness-cards">
+                <div class="card">
+                    <h3>Track Workout</h3>
+                    <button>Start Workout</button>
+                </div>
+                <div class="card">
+                    <h3>Goals</h3>
+                    <button>View Goals</button>
+                </div>
+                <div class="card">
+                    <h3>Progress</h3>
+                    <button>View Progress</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Admin Section (Admin functionalities can be implemented later) -->
+        <section class="admin-dashboard">
+            <h2>Admin Dashboard</h2>
+            <p>Manage Users and Monitor Progress</p>
+            <div class="admin-cards">
+                <div class="card">
+                    <h3>User Management</h3>
+                    <button>View Users</button>
+                </div>
+                <div class="card">
+                    <h3>Monitor Progress</h3>
+                    <button>Track Data</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Fitness Tracker</p>
+    </footer>
+
+    <!-- Link JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
