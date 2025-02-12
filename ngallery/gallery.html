@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostalgic Media Gallery</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #fdf6e3;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffdab9;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #8b4513;
+        }
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+        .slide-show, .collage {
+            width: 100%;
+            margin: 10px;
+        }
+        .slide-show {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 15px;
+            background-color: #fff7e6;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .slide-show img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+        }
+        .slide-show img.active {
+            display: block;
+        }
+        .collage {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        .collage img {
+            flex: 1 1 calc(33.333% - 10px);
+            max-width: calc(33.333% - 10px);
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #ffe4c4;
+            color: #8b4513;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Your Nostalgic Gallery</h1>
+    </header>
+    
+    <section class="gallery-container">
+        <div class="slide-show" id="slideShow">
+            <img src="1aa.jpeg" alt="Memorable Moment 1" class="active">
+            <img src="2aa.jpg" alt="Memorable Moment 2">
+            <img src="3aa.jpg" alt="Memorable Moment 3">
+        </div>
+
+        <div class="collage">
+            <img src="your-photo4.jpg" alt="Collage Photo 1">
+            <img src="your-photo5.jpg" alt="Collage Photo 2">
+            <img src="your-photo6.jpg" alt="Collage Photo 3">
+            <img src="your-photo7.jpg" alt="Collage Photo 4">
+            <img src="your-photo8.jpg" alt="Collage Photo 5">
+            <img src="your-photo9.jpg" alt="Collage Photo 6">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Your Nostalgic Gallery. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('#slideShow img');
+        
+        function showNextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        setInterval(showNextSlide, 3000);
+    </script>
+</body>
+</html>
